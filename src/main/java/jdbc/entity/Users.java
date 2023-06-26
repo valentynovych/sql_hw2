@@ -3,6 +3,7 @@ package jdbc.entity;
 public class Users {
     private Long userId;
     private String firstName;
+    private Integer ordersCount;
     private Long detailsId;
     private Long cardId;
 
@@ -24,6 +25,14 @@ public class Users {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public Integer getOrdersCount() {
+        return ordersCount;
+    }
+
+    public void setOrdersCount(Integer ordersCount) {
+        this.ordersCount = ordersCount;
     }
 
     public Long getDetailsId() {

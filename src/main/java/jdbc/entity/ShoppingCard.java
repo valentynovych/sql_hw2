@@ -2,9 +2,9 @@ package jdbc.entity;
 
 public class ShoppingCard {
     private Long cardId;
-    private String listProducts;
+    private Long product_id;
 
-    public ShoppingCard(){
+    public ShoppingCard() {
 
     }
 
@@ -16,19 +16,19 @@ public class ShoppingCard {
         this.cardId = cardId;
     }
 
-    public String getListProducts() {
-        return listProducts;
+    public Long getProduct_id() {
+        return product_id;
     }
 
-    public void setListProducts(String listProducts) {
-        this.listProducts = listProducts;
+    public void setProduct_id(Long product_id) {
+        this.product_id = product_id;
     }
 
     @Override
     public String toString() {
         return "ShoppingCard{" +
                 "cardId=" + cardId +
-                ", listProducts='" + listProducts + '\'' +
+                ", product_id=" + product_id +
                 '}';
     }
 }
