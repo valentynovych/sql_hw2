@@ -108,7 +108,7 @@ public class ProductsService extends BDConnection implements ProductsDAO {
     @Override
     public void deleteProductById(Long productId) {
 
-        String sql = "DELETE FROM products where product_id = ?";
+        String sql = "DELETE FROM products WHERE product_id = ?";
         PreparedStatement statement = null;
         try {
             statement = connection.prepareStatement(sql);
@@ -119,23 +119,6 @@ public class ProductsService extends BDConnection implements ProductsDAO {
             e.printStackTrace();
         } finally {
             closeStatementAndConnection(statement, connection);
-        }
-    }
-
-    private void closeStatementAndConnection(Statement statement, Connection connection) {
-        if (statement != null) {
-            try {
-                statement.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-        if (connection != null) {
-            try {
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
     }
 }
