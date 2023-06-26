@@ -12,7 +12,7 @@ public interface UsersDetailsDAO {
 
     List<UsersDetails> getAllUsersDetails();
 
-    void updateUsersDetailsById(Long detailsId);
+    void updateUsersDetailsById(UsersDetails usersDetails);
 
     void deleteUserDetailsById(Long detailsId);
 }
