@@ -1,5 +1,7 @@
 package jdbc.entity;
 
+import java.util.Objects;
+
 public class UsersDetails {
     private Long detailsId;
     private String lastName;
@@ -49,6 +51,23 @@ public class UsersDetails {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UsersDetails that = (UsersDetails) o;
+        return Objects.equals(detailsId, that.detailsId)
+                && Objects.equals(lastName, that.lastName)
+                && Objects.equals(age, that.age)
+                && Objects.equals(email, that.email)
+                && Objects.equals(city, that.city);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(detailsId, lastName, age, email, city);
     }
 
     @Override

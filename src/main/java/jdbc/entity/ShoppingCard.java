@@ -1,5 +1,7 @@
 package jdbc.entity;
 
+import java.util.Objects;
+
 public class ShoppingCard {
     private Long cardId;
     private Long product_id;
@@ -22,6 +24,20 @@ public class ShoppingCard {
 
     public void setProduct_id(Long product_id) {
         this.product_id = product_id;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ShoppingCard that = (ShoppingCard) o;
+        return Objects.equals(cardId, that.cardId) && Objects.equals(product_id, that.product_id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cardId, product_id);
     }
 
     @Override

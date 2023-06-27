@@ -1,5 +1,7 @@
 package jdbc.entity;
 
+import java.util.Objects;
+
 public class Products {
     private Long productId;
     private String productName;
@@ -40,6 +42,22 @@ public class Products {
 
     public void setAmount(Integer amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Products products = (Products) o;
+        return Objects.equals(productId, products.productId)
+                && Objects.equals(productName, products.productName)
+                && Objects.equals(productPrice, products.productPrice)
+                && Objects.equals(amount, products.amount);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(productId, productName, productPrice, amount);
     }
 
     @Override

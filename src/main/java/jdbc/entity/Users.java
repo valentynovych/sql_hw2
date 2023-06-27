@@ -1,5 +1,7 @@
 package jdbc.entity;
 
+import java.util.Objects;
+
 public class Users {
     private Long userId;
     private String firstName;
@@ -7,7 +9,7 @@ public class Users {
     private Long detailsId;
     private Long cardId;
 
-    public Users(){
+    public Users() {
 
     }
 
@@ -49,6 +51,23 @@ public class Users {
 
     public void setCardId(Long cardId) {
         this.cardId = cardId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Users users = (Users) o;
+        return userId.equals(users.userId)
+                && firstName.equals(users.firstName)
+                && ordersCount.equals(users.ordersCount)
+                && detailsId.equals(users.detailsId)
+                && cardId.equals(users.cardId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, firstName, ordersCount, detailsId, cardId);
     }
 
     @Override
