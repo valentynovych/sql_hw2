@@ -16,12 +16,11 @@ class UsersServiceTest extends UsersService {
     static void createUser(){
         user = new Users();
         Long userId = 100L;
-        String firstName = "Alex";
-        user.setUserId(userId);
-        user.setCardId(userId);
         user.setDetailsId(userId);
+        user.setUserId(userId);
+        user.setFirstName("Alex");
         user.setOrdersCount(userId.intValue());
-        user.setFirstName(firstName);
+        user.setCardId(userId);
     }
     @Test
     @Order(1)
@@ -44,6 +43,7 @@ class UsersServiceTest extends UsersService {
     void testGetAllUsers() {
         List<Users> usersList = getAllUsers();
         assertFalse(usersList.isEmpty());
+
     }
 
     @Test
