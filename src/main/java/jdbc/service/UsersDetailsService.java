@@ -13,15 +13,21 @@ public class UsersDetailsService extends BDConnection implements UsersDetailsDAO
 
     @Override
     public void addUsersDetails(UsersDetails usersDetails) {
+        connection = getConnection();
 
-        String sql = "INSERT INTO users_detrails VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO users_details VALUES (?, ?, ?, ?, ?)";
         PreparedStatement statement = null;
 
         try {
+
             statement = connection.prepareStatement(sql);
             statement.setLong(1, usersDetails.getDetailsId());
             statement.setString(2, usersDetails.getLastName());
-            statement.setInt(3, usersDetails.getAge());
+            if (usersDetails.getAge() == null){
+                statement.setNull(3, 1);
+            } else {
+                statement.setInt(3, usersDetails.getAge());
+            }
             statement.setString(4, usersDetails.getEmail());
             statement.setString(5, usersDetails.getCity());
             statement.executeUpdate();
@@ -35,9 +41,10 @@ public class UsersDetailsService extends BDConnection implements UsersDetailsDAO
 
     @Override
     public UsersDetails getUsersDetailById(Long detailsId) {
-        UsersDetails usersDetails = new UsersDetails();
+        connection = getConnection();
+        UsersDetails usersDetails = null;
 
-        String sql = "SELECT last_name, age, email, city FROM details_id WHERE details_id = ?";
+        String sql = "SELECT last_name, age, email, city FROM users_details WHERE details_id = ?";
 
         PreparedStatement statement = null;
 
@@ -45,12 +52,15 @@ public class UsersDetailsService extends BDConnection implements UsersDetailsDAO
             statement = connection.prepareStatement(sql);
             statement.setLong(1, detailsId);
 
-            ResultSet resultSet = statement.executeQuery(sql);
-            resultSet.next();
-            usersDetails.setLastName(resultSet.getString(1));
-            usersDetails.setAge(resultSet.getInt(2));
-            usersDetails.setEmail(resultSet.getString(3));
-            usersDetails.setCity(resultSet.getString(4));
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                usersDetails = new UsersDetails();
+                usersDetails.setDetailsId(detailsId);
+                usersDetails.setLastName(resultSet.getString(1));
+                usersDetails.setAge(resultSet.getInt(2));
+                usersDetails.setEmail(resultSet.getString(3));
+                usersDetails.setCity(resultSet.getString(4));
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -62,11 +72,13 @@ public class UsersDetailsService extends BDConnection implements UsersDetailsDAO
 
     @Override
     public List<UsersDetails> getAllUsersDetails() {
+        connection = getConnection();
         List<UsersDetails> usersDetailsList = new ArrayList<>();
 
         String sql = "SELECT details_id, last_name, age, email, city FROM users_details";
         Statement statement = null;
         try {
+            statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
 
             while (resultSet.next()) {
@@ -89,6 +101,7 @@ public class UsersDetailsService extends BDConnection implements UsersDetailsDAO
 
     @Override
     public void updateUsersDetailsById(UsersDetails usersDetails) {
+        connection = getConnection();
         String sql = "UPDATE users_details SET last_name = ?, age = ?, email = ?, city = ? WHERE details_id = ?";
         PreparedStatement statement = null;
 
@@ -112,7 +125,8 @@ public class UsersDetailsService extends BDConnection implements UsersDetailsDAO
 
     @Override
     public void deleteUserDetailsById(Long detailsId) {
-        String sql = "DELETE FROM users_detail WHERE details_id = ?";
+        connection = getConnection();
+        String sql = "DELETE FROM users_details WHERE details_id = ?";
         PreparedStatement statement = null;
 
         try {

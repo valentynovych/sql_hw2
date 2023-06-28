@@ -12,10 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCardService extends BDConnection implements ShoppingCardDAO {
-    Connection connection = getConnection();
+    Connection connection;
 
     @Override
     public void addProductToCard(ShoppingCard shoppingCard) {
+        connection = getConnection();
         String sql = "INSERT INTO shopping_cart VALUES (?, ?)";
         PreparedStatement statement = null;
 
@@ -33,6 +34,7 @@ public class ShoppingCardService extends BDConnection implements ShoppingCardDAO
 
     @Override
     public void deleteProductById(Long cardId, Long productId) {
+        connection = getConnection();
         String sql = "DELETE FROM shopping_cart WHERE card_id = ? AND product_id = ?";
 
         PreparedStatement statement = null;
@@ -50,7 +52,7 @@ public class ShoppingCardService extends BDConnection implements ShoppingCardDAO
 
     @Override
     public List<Long> getAllProducts(Long cardId) {
-
+        connection = getConnection();
         List<Long> listProductsIds = new ArrayList<>();
         String sql = "SELECT product_id from shopping_cart WHERE card_id = ?";
 
@@ -60,7 +62,7 @@ public class ShoppingCardService extends BDConnection implements ShoppingCardDAO
             statement = connection.prepareStatement(sql);
             statement.setLong(1, cardId);
 
-            ResultSet resultSet = statement.getResultSet();
+            ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Long productId = resultSet.getLong("product_id");
                 listProductsIds.add(productId);
@@ -77,6 +79,7 @@ public class ShoppingCardService extends BDConnection implements ShoppingCardDAO
 
     @Override
     public void clearShoppingCardById(Long cardId) {
+        connection = getConnection();
         String sql = "DELETE FROM shopping_cart WHERE card_id = ?";
         PreparedStatement statement = null;
 
