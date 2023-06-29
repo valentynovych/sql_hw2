@@ -56,6 +56,7 @@ class ShoppingCardServiceTest extends ShoppingCardService {
     void testClearShoppingCardById() {
         clearShoppingCardById(shoppingCard.getCardId());
         List<Long> listProductIds = getAllProducts(shoppingCard.getCardId());
+        productsService.deleteProductById(products.getProductId());
         assertTrue(listProductIds.isEmpty());
     }
 }

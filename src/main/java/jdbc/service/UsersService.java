@@ -134,9 +134,13 @@ public class UsersService extends BDConnection implements UsersDAO {
         connection = getConnection();
         String sql = "DELETE FROM users WHERE user_id = ?";
         PreparedStatement statement = null;
-
+        String sql2 = "DELETE FROM users_details WHERE details_id = ?";
         try {
             statement = connection.prepareStatement(sql);
+            statement.setLong(1, userId);
+            statement.executeUpdate();
+
+            statement = connection.prepareStatement(sql2);
             statement.setLong(1, userId);
             statement.executeUpdate();
 

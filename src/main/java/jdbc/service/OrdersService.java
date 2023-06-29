@@ -7,13 +7,14 @@ import jdbc.entity.Products;
 import jdbc.entity.Users;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class OrdersService extends BDConnection implements OrdersDAO {
     Connection connection;
 
-    public void createOrder(Users user) {
+    public Orders createOrder(Users user) {
         ShoppingCardService cardService = new ShoppingCardService();
         ProductsService productsService = new ProductsService();
 
@@ -41,7 +42,7 @@ public class OrdersService extends BDConnection implements OrdersDAO {
         newOrder.setOrderId(getMaxId() + 1);
         newOrder.setUserId(user.getUserId());
         newOrder.setOrderPrice(orderPrice);
-//        newOrder.setOrderDate(Date.valueOf(LocalDate.now()));
+        newOrder.setOrderDate(Date.valueOf(LocalDate.now()));
         newOrder.setListProducts(listProductsOfString.toString());
 
         saveOrder(newOrder);
@@ -49,13 +50,14 @@ public class OrdersService extends BDConnection implements OrdersDAO {
         user.setOrdersCount(user.getOrdersCount() + 1);
         usersService.updateUserById(user);
         cardService.clearShoppingCardById(user.getCardId());
+        return newOrder;
     }
 
     @Override
     public void saveOrder(Orders orders) {
         connection = getConnection();
 
-        String sql = "INSERT INTO orders VALUES (?, ?, ?, now(), ?)";
+        String sql = "INSERT INTO orders VALUES (?, ?, ?, ?, ?)";
         PreparedStatement statement = null;
 
         try {
@@ -63,8 +65,8 @@ public class OrdersService extends BDConnection implements OrdersDAO {
             statement.setLong(1, orders.getOrderId());
             statement.setLong(2, orders.getUserId());
             statement.setString(3, orders.getListProducts());
-            // statement.setDate(4, orders.getOrderDate());
-            statement.setDouble(4, orders.getOrderPrice());
+            statement.setDate(4, orders.getOrderDate());
+            statement.setDouble(5, orders.getOrderPrice());
             statement.executeUpdate();
 
         } catch (SQLException e) {
@@ -135,7 +137,7 @@ public class OrdersService extends BDConnection implements OrdersDAO {
         return ordersList;
     }
 
-    private Long getMaxId() {
+    protected Long getMaxId() {
         connection = getConnection();
         Long maxId = null;
         String sql = "SELECT max(order_id) from orders";
