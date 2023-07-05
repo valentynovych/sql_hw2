@@ -11,17 +11,17 @@
 
         <property name="default_schema">new_shop2</property>
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.format_sql">true</property>
+<!--        <property name="hibernate.format_sql">true</property>-->
 
         <!-- DB schema will be updated if needed -->
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="current_session_context_class">thread</property>
 
-        <mapping class="hibernate.entity.UsersDetails"/>
-        <mapping class="hibernate.entity.Users"/>
+        <mapping class="hibernate.entity.UserDetails"/>
+        <mapping class="hibernate.entity.User"/>
         <mapping class="hibernate.entity.ShoppingCard"/>
-        <mapping class="hibernate.entity.Products"/>
-        <mapping class="hibernate.entity.Orders"/>
+        <mapping class="hibernate.entity.Product"/>
+        <mapping class="hibernate.entity.Order"/>
 
     </session-factory>
 </hibernate-configuration>
