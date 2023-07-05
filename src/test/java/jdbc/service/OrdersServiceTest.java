@@ -101,7 +101,7 @@ class OrdersServiceTest extends OrdersService {
         saveOrder(order);
 
         List<Orders> ordersList = getAllUserOrdersById(order.getUserId());
-        assertTrue(ordersList.add(order));
+        assertTrue(ordersList.contains(order));
     }
 
     @Test

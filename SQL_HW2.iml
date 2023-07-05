@@ -15,7 +15,8 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="SQL_HW2" />
+          <factory-entry name="SQL_HW2" value="70a29555-31fa-4271-9196-24d00aa80048" />
+          <factory-entry name="noname-a.xml@0" value="e77a2e9a-7d05-47a3-af60-b56d4066f880" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
@@ -58,5 +59,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.istack:istack-commons-runtime:4.1.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: jakarta.inject:jakarta.inject-api:2.0.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.antlr:antlr4-runtime:4.10.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.20.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.20.0" level="project" />
   </component>
 </module>
