@@ -1,21 +1,24 @@
 package hibernate.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-import java.io.Serializable;
 import java.util.Objects;
+
 @Entity
-public class Products implements Serializable {
+@Table(name = "products")
+public class Product {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
     private Long productId;
+    @Column(name = "product_name")
     private String productName;
+    @Column(name = "product_price")
     private Double productPrice;
+    @Column(name = "amount")
     private Integer amount;
 
-    public Products() {
+    public Product() {
 
     }
 
@@ -55,11 +58,11 @@ public class Products implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Products products = (Products) o;
-        return Objects.equals(productId, products.productId)
-                && Objects.equals(productName, products.productName)
-                && Objects.equals(productPrice, products.productPrice)
-                && Objects.equals(amount, products.amount);
+        Product product = (Product) o;
+        return Objects.equals(productId, product.productId)
+                && Objects.equals(productName, product.productName)
+                && Objects.equals(productPrice, product.productPrice)
+                && Objects.equals(amount, product.amount);
     }
 
     @Override

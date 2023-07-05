@@ -1,18 +1,15 @@
 package hibernate.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
-import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "users_details")
-public class UsersDetails implements Serializable {
+public class UserDetails {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "details_id")
     private Long detailsId;
     @Column(name = "last_name")
@@ -24,7 +21,7 @@ public class UsersDetails implements Serializable {
     @Column(name = "city")
     private String city;
 
-    public UsersDetails() {
+    public UserDetails() {
 
     }
 
@@ -72,7 +69,7 @@ public class UsersDetails implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UsersDetails that = (UsersDetails) o;
+        UserDetails that = (UserDetails) o;
         return Objects.equals(detailsId, that.detailsId)
                 && Objects.equals(lastName, that.lastName)
                 && Objects.equals(age, that.age)

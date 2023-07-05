@@ -3,12 +3,13 @@ package hibernate.entity;
 
 import jakarta.persistence.*;
 
-import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class Users implements Serializable {
+@Table(name = "users")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,15 +19,18 @@ public class Users implements Serializable {
     private String firstName;
     @Column(name = "orders_count")
     private Integer ordersCount;
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "details_id")
-    private UsersDetails detailsId;
-    @OneToMany
-    @JoinColumn(name = "card_id")
-    @Column(name = "card_id")
-    private List<ShoppingCard> cardId;
+    private UserDetails detailsId;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "shopping_cart",
+            joinColumns = { @JoinColumn(name = "card_id") },
+            inverseJoinColumns = { @JoinColumn(name = "product_id") })
+    private List<Product> products = new ArrayList<>();
+    @OneToMany(mappedBy = "userId", fetch = FetchType.LAZY)
+    private List<Order> orders = new ArrayList<>();
 
-    public Users() {
+    public User() {
 
     }
 
@@ -54,37 +58,45 @@ public class Users implements Serializable {
         this.ordersCount = ordersCount;
     }
 
-    public UsersDetails getDetailsId() {
+    public UserDetails getDetailsId() {
         return detailsId;
     }
 
-    public void setDetailsId(UsersDetails detailsId) {
+    public void setDetailsId(UserDetails detailsId) {
         this.detailsId = detailsId;
     }
 
-    public List<ShoppingCard> getCardId() {
-        return cardId;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setCardId(List<ShoppingCard> cardId) {
-        this.cardId = cardId;
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Users users = (Users) o;
-        return userId.equals(users.userId)
-                && firstName.equals(users.firstName)
-                && ordersCount.equals(users.ordersCount)
-                && detailsId.equals(users.detailsId)
-                && cardId.equals(users.cardId);
+        User user = (User) o;
+        return userId.equals(user.userId)
+                && firstName.equals(user.firstName)
+                && ordersCount.equals(user.ordersCount)
+                && detailsId.equals(user.detailsId)
+                && products.equals(user.products);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, firstName, ordersCount, detailsId, cardId);
+        return Objects.hash(userId, firstName, ordersCount, detailsId, products);
     }
 
     @Override
@@ -93,7 +105,7 @@ public class Users implements Serializable {
                 "userId=" + userId +
                 ", firstName='" + firstName + '\'' +
                 ", detailsId=" + detailsId +
-                ", cardId=" + cardId +
+                ", cardId=" + products +
                 '}';
     }
 }

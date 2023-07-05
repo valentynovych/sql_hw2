@@ -2,19 +2,21 @@ package hibernate.entity;
 
 import jakarta.persistence.*;
 
-import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "shopping_cart")
-public class ShoppingCard implements Serializable {
+public class ShoppingCard {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
     @Column(name = "card_id")
     private Long cardId;
     @OneToMany
     @JoinColumn(name = "product_id")
-    private List<Products> productId;
+    private List<Product> productId = new ArrayList<>();
 
     public ShoppingCard() {
 
@@ -28,11 +30,11 @@ public class ShoppingCard implements Serializable {
         this.cardId = cardId;
     }
 
-    public List<Products> getProductId() {
+    public List<Product> getProductId() {
         return productId;
     }
 
-    public void setProductId(List<Products> product_id) {
+    public void setProductId(List<Product> product_id) {
         this.productId = product_id;
     }
 

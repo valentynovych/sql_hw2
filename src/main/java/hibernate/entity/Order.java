@@ -2,31 +2,31 @@ package hibernate.entity;
 
 import jakarta.persistence.*;
 
-import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "orders")
-public class Orders implements Serializable {
+public class Order {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
     private Long orderId;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private Users userId;
-
-    @OneToMany
-    @JoinColumn(name = "product_id")
-    @Column(name = "list_products")
-    private List<Products> listProducts;
+    private User userId;
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "order_products",
+            joinColumns = @JoinColumn(name = "order_id"),
+    inverseJoinColumns = @JoinColumn(name = "product_id"))
+    private List<Product> listProducts;
     @Column(name = "order_date")
     private Date orderDate;
     @Column(name = "order_price")
     private Double orderPrice;
 
-    public Orders() {
+    public Order() {
 
     }
 
@@ -38,19 +38,19 @@ public class Orders implements Serializable {
         this.orderId = orderId;
     }
 
-    public Users getUserId() {
+    public User getUserId() {
         return userId;
     }
 
-    public void setUserId(Users userId) {
+    public void setUserId(User userId) {
         this.userId = userId;
     }
 
-    public List<Products> getListProducts() {
+    public List<Product> getListProducts() {
         return listProducts;
     }
 
-    public void setListProducts(List<Products> listProducts) {
+    public void setListProducts(List<Product> listProducts) {
         this.listProducts = listProducts;
     }
 
@@ -74,12 +74,12 @@ public class Orders implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Orders orders = (Orders) o;
-        return Objects.equals(orderId, orders.orderId)
-                && Objects.equals(userId, orders.userId)
-                && Objects.equals(listProducts, orders.listProducts)
-                && Objects.equals(orderDate, orders.orderDate)
-                && Objects.equals(orderPrice, orders.orderPrice);
+        Order order = (Order) o;
+        return Objects.equals(orderId, order.orderId)
+                && Objects.equals(userId, order.userId)
+                && Objects.equals(listProducts, order.listProducts)
+                && Objects.equals(orderDate, order.orderDate)
+                && Objects.equals(orderPrice, order.orderPrice);
     }
 
     @Override
