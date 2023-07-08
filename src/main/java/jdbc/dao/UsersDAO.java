@@ -5,6 +5,7 @@ import jdbc.entity.Users;
 import java.util.List;
 
 public interface UsersDAO {
+
     void addUser(Users users);
 
     Users getUserById(Long userId);

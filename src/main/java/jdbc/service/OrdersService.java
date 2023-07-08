@@ -141,7 +141,7 @@ public class OrdersService extends BDConnection implements OrdersDAO {
         connection = getConnection();
         Long maxId = null;
         String sql = "SELECT max(order_id) from orders";
-        Statement statement = null;
+        Statement statement;
         try {
             statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);

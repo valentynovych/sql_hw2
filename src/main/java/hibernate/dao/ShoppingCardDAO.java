@@ -1,6 +1,7 @@
 package hibernate.dao;
 
 
+import hibernate.entity.Product;
 import hibernate.entity.ShoppingCard;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public interface ShoppingCardDAO {
 
     void deleteProductById(Long cardId, Long productId);
 
-    List<Long> getAllProducts(Long cardId);
+    List<Product> getAllProducts(Long cardId);
 
     void clearShoppingCardById(Long cardId);
 }

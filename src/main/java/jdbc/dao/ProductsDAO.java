@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface ProductsDAO {
+
     void addProducts(Products product) throws SQLException;
 
     Products getProductById(Long productId);

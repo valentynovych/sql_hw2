@@ -2,8 +2,6 @@ package hibernate.entity;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -14,9 +12,9 @@ public class ShoppingCard {
     Long id;
     @Column(name = "card_id")
     private Long cardId;
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "product_id")
-    private List<Product> productId = new ArrayList<>();
+    private Product productId;
 
     public ShoppingCard() {
 
@@ -30,11 +28,11 @@ public class ShoppingCard {
         this.cardId = cardId;
     }
 
-    public List<Product> getProductId() {
+    public Product getProductId() {
         return productId;
     }
 
-    public void setProductId(List<Product> product_id) {
+    public void setProductId(Product product_id) {
         this.productId = product_id;
     }
 

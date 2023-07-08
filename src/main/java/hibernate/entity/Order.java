@@ -2,7 +2,7 @@ package hibernate.entity;
 
 import jakarta.persistence.*;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,13 +16,13 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User userId;
-    @OneToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "order_products",
             joinColumns = @JoinColumn(name = "order_id"),
-    inverseJoinColumns = @JoinColumn(name = "product_id"))
+            inverseJoinColumns = @JoinColumn(name = "product_id"))
     private List<Product> listProducts;
     @Column(name = "order_date")
-    private Date orderDate;
+    private LocalDateTime orderDate;
     @Column(name = "order_price")
     private Double orderPrice;
 
@@ -54,11 +54,11 @@ public class Order {
         this.listProducts = listProducts;
     }
 
-    public Date getOrderDate() {
+    public LocalDateTime getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(LocalDateTime orderDate) {
         this.orderDate = orderDate;
     }
 
@@ -89,10 +89,10 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Orders{" +
+        return " Order{" +
                 "orderId=" + orderId +
                 ", userId=" + userId +
-                ", listProducts='" + listProducts + '\'' +
+                ", listProducts=" + listProducts +
                 ", orderDate=" + orderDate +
                 ", orderPrice=" + orderPrice +
                 '}';

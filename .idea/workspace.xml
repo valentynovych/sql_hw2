@@ -4,60 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23825336-8f93-429a-9ae9-58fdc57d5ef1" name="Changes" comment="fix crash orders service tests">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_4_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_smallrye_jandex_3_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_inject_jakarta_inject_api_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_2_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_4_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_12_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_angus_angus_activation_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_core_4_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_4_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_4_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_6_0_6_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_orm_hibernate_core_6_2_6_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_5_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bdConnection/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/Orders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/Products.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/ShoppingCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/UsersDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="23825336-8f93-429a-9ae9-58fdc57d5ef1" name="Changes" comment="any project changes">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_20_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_20_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/ShoppingCardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/UserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hibernate/service/OrderServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hibernate/service/ProductServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hibernate/service/ShoppingCardServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hibernate/service/UserDetailsServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hibernate/service/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL_HW2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_HW2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/ShoppingCardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/ShoppingCardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/ShoppingCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/ShoppingCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/entity/UserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/entity/UserDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jdbc/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdbc/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdbc/dao/OrdersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdbc/dao/OrdersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdbc/dao/ProductsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdbc/dao/ProductsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdbc/dao/ShoppingCardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdbc/dao/ShoppingCardDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdbc/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdbc/dao/UsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdbc/service/OrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdbc/service/OrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jdbc/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jdbc/service/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j21.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Tag Library Descriptor" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -67,38 +64,42 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2RbhglYABKQeqyKCfb6IP6JJOqM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;jdbc.service.UsersDetailsService&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sasha/.m2/repository/org/hibernate&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.44367817&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JPA.DatabaseSchemaImportDialog": "e77a2e9a-7d05-47a3-af60-b56d4066f880",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "hibernate.service.OrderService",
+    "last_opened_file_path": "C:/Users/sasha/.m2/repository/org/hibernate",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.44367817",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -107,89 +108,101 @@
       <recent name="D:\##### SpaceLab\SQL_HW2\src\main\java\hibernate" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
-      <recent name="jdbc.service.UsersDetailsService" />
-      <recent name="jdbc.service.ShoppingCardService" />
-      <recent name="jdbc.service.ProductsService" />
-      <recent name="jdbc.service.OrdersService" />
-      <recent name="jdbc.service.UsersService" />
+      <recent name="hibernate.service.OrderService" />
+      <recent name="hibernate.service.ProductService" />
+      <recent name="hibernate.service.ShoppingCardService" />
+      <recent name="hibernate.service.UserDetailsService" />
+      <recent name="hibernate.service.UserService" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="jdbc" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="hibernate.service" />
       <recent name="jdbc.service" />
       <recent name="jdbc" />
     </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="testsEntity" />
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hibernate.dao" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Demo">
-    <configuration name="Demo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hibernate.Demo" />
+  <component name="RunManager" selected="JUnit.hibernate.service in SQL_HW2">
+    <configuration name="OrderServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SQL_HW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hibernate.*" />
+          <option name="PATTERN" value="hibernate.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrdersServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SQL_HW2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jdbc.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="jdbc.service.OrdersServiceTest" />
+      <option name="PACKAGE_NAME" value="hibernate.service" />
+      <option name="MAIN_CLASS_NAME" value="hibernate.service.OrderServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrdersServiceTest.testCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceTest.testCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SQL_HW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jdbc.service.*" />
+          <option name="PATTERN" value="hibernate.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="jdbc.service.OrdersServiceTest" />
+      <option name="PACKAGE_NAME" value="hibernate.service" />
+      <option name="MAIN_CLASS_NAME" value="hibernate.service.OrderServiceTest" />
       <option name="METHOD_NAME" value="testCreateOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceTest.testGetAllUserOrdersById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SQL_HW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jdbc.service.*" />
+          <option name="PATTERN" value="hibernate.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="jdbc.service" />
-      <option name="MAIN_CLASS_NAME" value="jdbc.service.ProductsServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="hibernate.service" />
+      <option name="MAIN_CLASS_NAME" value="hibernate.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="testGetAllUserOrdersById" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="jdbc.service in SQL_HW2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceTest.testSaveOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SQL_HW2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jdbc.service.*" />
+          <option name="PATTERN" value="hibernate.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="jdbc.service" />
+      <option name="PACKAGE_NAME" value="hibernate.service" />
+      <option name="MAIN_CLASS_NAME" value="hibernate.service.OrderServiceTest" />
+      <option name="METHOD_NAME" value="testSaveOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hibernate.service in SQL_HW2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SQL_HW2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hibernate.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hibernate.service" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -197,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo" />
-        <item itemvalue="JUnit.jdbc.service in SQL_HW2" />
-        <item itemvalue="JUnit.OrdersServiceTest" />
-        <item itemvalue="JUnit.OrdersServiceTest.testCreateOrder" />
-        <item itemvalue="JUnit.ProductsServiceTest" />
+        <item itemvalue="JUnit.hibernate.service in SQL_HW2" />
+        <item itemvalue="JUnit.OrderServiceTest" />
+        <item itemvalue="JUnit.OrderServiceTest.testCreateOrder" />
+        <item itemvalue="JUnit.OrderServiceTest.testSaveOrder" />
+        <item itemvalue="JUnit.OrderServiceTest.testGetAllUserOrdersById" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +245,18 @@
       <workItem from="1688077610802" duration="878000" />
       <workItem from="1688120699681" duration="604000" />
       <workItem from="1688139533548" duration="11906000" />
-      <workItem from="1688160030966" duration="996000" />
+      <workItem from="1688160030966" duration="1436000" />
+      <workItem from="1688198249570" duration="10884000" />
+      <workItem from="1688239410771" duration="19009000" />
+      <workItem from="1688364410509" duration="216000" />
+      <workItem from="1688414415002" duration="10103000" />
+      <workItem from="1688471361241" duration="3713000" />
+      <workItem from="1688495820955" duration="8704000" />
+      <workItem from="1688565281697" duration="18167000" />
+      <workItem from="1688641229164" duration="2000" />
+      <workItem from="1688659132169" duration="18659000" />
+      <workItem from="1688763475172" duration="5854000" />
+      <workItem from="1688801088358" duration="19382000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit">
       <created>1687524908928</created>
@@ -339,7 +363,56 @@
       <option name="project" value="LOCAL" />
       <updated>1688072844790</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add hibernate libs">
+      <created>1688161198727</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688161198727</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Create hibernate entityes">
+      <created>1688161252640</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688161252640</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add logger properties">
+      <created>1688586729244</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1688586729244</updated>
+    </task>
+    <task id="LOCAL-00019" summary="configure hibernate and session">
+      <created>1688586775381</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1688586775381</updated>
+    </task>
+    <task id="LOCAL-00020" summary="create DAO for hibernate entity">
+      <created>1688587440662</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1688587440662</updated>
+    </task>
+    <task id="LOCAL-00021" summary="create hibernate entity">
+      <created>1688587481761</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1688587481761</updated>
+    </task>
+    <task id="LOCAL-00022" summary="any project changes">
+      <created>1688587546961</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1688587546961</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,15 +456,22 @@
     <MESSAGE value="modify class connection to BD" />
     <MESSAGE value="any changes" />
     <MESSAGE value="fix crash orders service tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix crash orders service tests" />
+    <MESSAGE value="add hibernate libs" />
+    <MESSAGE value="Create hibernate entityes" />
+    <MESSAGE value="add logger properties" />
+    <MESSAGE value="configure hibernate and session" />
+    <MESSAGE value="create DAO for hibernate entity" />
+    <MESSAGE value="create hibernate entity" />
+    <MESSAGE value="any project changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="any project changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bdConnection/HibernateUtil.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/test/java/hibernate/service/OrderServiceTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

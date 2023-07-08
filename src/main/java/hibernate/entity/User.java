@@ -3,7 +3,6 @@ package hibernate.entity;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,20 +14,20 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long userId;
-    @Column(name = "first_name")
+    @Column(name = "first_name", length = 15)
     private String firstName;
     @Column(name = "orders_count")
     private Integer ordersCount;
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "details_id")
     private UserDetails detailsId;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "shopping_cart",
-            joinColumns = { @JoinColumn(name = "card_id") },
-            inverseJoinColumns = { @JoinColumn(name = "product_id") })
-    private List<Product> products = new ArrayList<>();
-    @OneToMany(mappedBy = "userId", fetch = FetchType.LAZY)
-    private List<Order> orders = new ArrayList<>();
+            joinColumns = {@JoinColumn(name = "card_id")},
+            inverseJoinColumns = {@JoinColumn(name = "product_id")})
+    private List<Product> products;
+    @OneToMany(mappedBy = "userId", fetch = FetchType.EAGER)
+    private List<Order> orders;
 
     public User() {
 
@@ -101,11 +100,13 @@ public class User {
 
     @Override
     public String toString() {
-        return "Users{" +
+        return "User{" +
                 "userId=" + userId +
                 ", firstName='" + firstName + '\'' +
+                ", ordersCount=" + ordersCount +
                 ", detailsId=" + detailsId +
-                ", cardId=" + products +
+                ", products=" + products +
+                ", orders=" + orders +
                 '}';
     }
 }

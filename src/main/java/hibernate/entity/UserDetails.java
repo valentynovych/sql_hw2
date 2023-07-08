@@ -70,11 +70,7 @@ public class UserDetails {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserDetails that = (UserDetails) o;
-        return Objects.equals(detailsId, that.detailsId)
-                && Objects.equals(lastName, that.lastName)
-                && Objects.equals(age, that.age)
-                && Objects.equals(email, that.email)
-                && Objects.equals(city, that.city);
+        return Objects.equals(detailsId, that.detailsId) && Objects.equals(lastName, that.lastName) && Objects.equals(age, that.age) && Objects.equals(email, that.email) && Objects.equals(city, that.city);
     }
 
     @Override

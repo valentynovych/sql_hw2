@@ -8,7 +8,7 @@ import java.util.Objects;
 @Table(name = "products")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "product_id")
     private Long productId;
     @Column(name = "product_name")
@@ -59,10 +59,7 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Objects.equals(productId, product.productId)
-                && Objects.equals(productName, product.productName)
-                && Objects.equals(productPrice, product.productPrice)
-                && Objects.equals(amount, product.amount);
+        return Objects.equals(productId, product.productId) && Objects.equals(productName, product.productName) && Objects.equals(productPrice, product.productPrice) && Objects.equals(amount, product.amount);
     }
 
     @Override

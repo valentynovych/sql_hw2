@@ -13,6 +13,7 @@ public class UsersService extends BDConnection implements UsersDAO {
 
     Connection connection;
 
+
     @Override
     public void addUser(Users users) {
         connection = getConnection();
